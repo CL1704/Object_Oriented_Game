@@ -11,7 +11,6 @@ void setup(){
   background = loadImage("background.png");
   imageMode(CENTER);
   
-  
  gif1 = new Gif(this, "munchwalkside.gif");
  gif2 = new Gif(this, "munchwalkside2.gif");
  gif3 = new Gif(this, "munchwalkdownt.gif");
@@ -24,33 +23,30 @@ void setup(){
   gif3.play();
   
 }
+class Gif {
 
+  
+  
+}
 void draw() {
  background(255);
  image(background,310,80);
  rectMode(CENTER);
  fill(#484639);
- rect(width/2, 350, width, 100);
- if ( gif1.isPlaying() ){
-   
-  if(keyCode == RIGHT) {
-   image(gif1,posX, 300);
-   }
- if(keyCode == LEFT) {
-   image(gif2,posX, 300);
-   
+ rect(width/2, 350, width, 100);  
 }
 
-}
-}
 void keyPressed(){
-  if(keyPressed == true){
-    if (keyCode == RIGHT) {
-  posX = posX +7;
-  }
-  if(keyCode == LEFT) {
-    posX = posX -7;
-    
-  }
+ if (keyCode == LEFT) {
+   leftPressed = true;
+ } else if (keyCode == RIGHT) {
+   rightPressed = true;
+ } 
 }
+
+void keyReleased() {
+  if (keyCode == LEFT) {
+    rightPressed = false;
+  }else if (keyCode == RIGHT);
+  leftPressed = false;
 }
