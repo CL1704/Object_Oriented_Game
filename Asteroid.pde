@@ -33,7 +33,10 @@ class Asteroid {
     popMatrix();
 //this is the hitbox
     noFill();
-    circle(x, y+12, 50);
+    ///////////////////////////////////////////////////////////
+   // circle(x, y+12, 50);
+   //comment out above to hide the hitbox of the meteors
+   ///////////////////////////////////////////////////////////
   }
 
   boolean offScreen() {

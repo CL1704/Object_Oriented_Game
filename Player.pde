@@ -1,6 +1,6 @@
 import gifAnimation.*;
-int hitW = 40; //hitbox dimensions
-int hitH = 64;
+int hitW = 30; //hitbox dimensions for width and height
+int hitH = 50;
 
 class Player {
   int posX = 300;
@@ -48,7 +48,10 @@ class Player {
     }
         noFill();
   stroke(255);
-  rect(posX,310,hitW,hitH); //hitbox of the player
+  /////////////////////////////////////////////////////////////////
+  //rect(posX,310,hitW,hitH); //hitbox of the player
+  //comment out above to hide player hurtbox
+  /////////////////////////////////////////////////////////////////
   }
 //mvmt is short for movement!, 
 //below is the code for tracking player inputs into movements
